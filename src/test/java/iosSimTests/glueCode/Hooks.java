@@ -38,18 +38,12 @@ public class Hooks
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 	
-	@After("@ss")
-	public void takeScreenshot(Scenario scenario)
+	@After
+	public void tearDown(Scenario scenario)
 	{
 		final byte[] screenshot = ((TakesScreenshot) driver)
                 .getScreenshotAs(OutputType.BYTES);
          scenario.embed(screenshot, "image/png"); 
-	}
-	
-	
-	@After
-	public void tearDown()
-	{
 		driver.quit();
 		service.stop();
 		report.zipReports();
