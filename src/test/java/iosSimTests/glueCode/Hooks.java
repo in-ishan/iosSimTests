@@ -1,11 +1,7 @@
 package iosSimTests.glueCode;
 
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import io.appium.java_client.AppiumDriver;
@@ -13,12 +9,15 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
+import iosSimTests.util.Reporting;
 
 public class Hooks 
 {
 	public static AppiumDriver<MobileElement> driver;
 	private DesiredCapabilities dc ;
 	private AppiumDriverLocalService service;
+	
+	Reporting report=new Reporting();
 	
 	@Before
 	public void setUp()
@@ -40,6 +39,9 @@ public class Hooks
 	{
 		driver.quit();
 		service.stop();
+		report.gernateReport();
+		report.zipReports();
+	
 	}
 
 }

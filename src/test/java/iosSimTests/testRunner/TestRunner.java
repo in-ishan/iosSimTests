@@ -10,7 +10,7 @@ glue="iosSimTests/glueCode",
 dryRun = false,
 strict = true,
 monochrome = true,
-plugin = {"pretty", "html:target/testResults/html/result.html"}
+plugin = {"pretty", "html:reports/html/result.html","json:reports/json/result.json"}
 )
 
 public class TestRunner extends AbstractTestNGCucumberTests
