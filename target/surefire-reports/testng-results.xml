@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Test Suite" duration-ms="69565" started-at="2017-01-18T14:32:17Z" finished-at="2017-01-18T14:33:27Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:iosSimTests.testRunner.TestRunner@7f560810]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Test Set" duration-ms="69565" started-at="2017-01-18T14:32:17Z" finished-at="2017-01-18T14:33:27Z">
+      <class name="iosSimTests.testRunner.TestRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:iosSimTests.testRunner.TestRunner@7f560810]" name="setUpClass" is-config="true" duration-ms="218" started-at="2017-01-18T20:02:17Z" finished-at="2017-01-18T20:02:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:iosSimTests.testRunner.TestRunner@7f560810]" name="feature" duration-ms="69236" started-at="2017-01-18T20:02:18Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2017-01-18T20:03:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Control]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:iosSimTests.testRunner.TestRunner@7f560810]" name="tearDownClass" is-config="true" duration-ms="18" started-at="2017-01-18T20:03:27Z" finished-at="2017-01-18T20:03:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- iosSimTests.testRunner.TestRunner -->
+    </test> <!-- Test Set -->
+  </suite> <!-- Test Suite -->
+</testng-results>
