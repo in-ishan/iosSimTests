@@ -1,7 +1,11 @@
 package iosSimTests.glueCode;
 
 import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import io.appium.java_client.AppiumDriver;
@@ -34,12 +38,20 @@ public class Hooks
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 	
+	@After("@ss")
+	public void takeScreenshot(Scenario scenario)
+	{
+		final byte[] screenshot = ((TakesScreenshot) driver)
+                .getScreenshotAs(OutputType.BYTES);
+         scenario.embed(screenshot, "image/png"); 
+	}
+	
+	
 	@After
 	public void tearDown()
 	{
 		driver.quit();
 		service.stop();
-		report.gernateReport();
 		report.zipReports();
 	
 	}

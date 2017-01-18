@@ -17,7 +17,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 64245221293,
+  "duration": 67392292751,
   "status": "passed"
 });
 formatter.scenario({
@@ -47,7 +47,7 @@ formatter.match({
   "location": "ControlsStepDefs.user_is_on_controls_page()"
 });
 formatter.result({
-  "duration": 3396257362,
+  "duration": 3224184201,
   "status": "passed"
 });
 formatter.match({
@@ -60,18 +60,19 @@ formatter.match({
   "location": "ControlsStepDefs.user_slided_the_customized_slider_to(int)"
 });
 formatter.result({
-  "duration": 3876898888,
+  "duration": 3905797745,
   "status": "passed"
 });
 formatter.match({
   "location": "ControlsStepDefs.slider_value_should_changed_to()"
 });
 formatter.result({
-  "duration": 2319152157,
+  "duration": 2310253880,
   "status": "passed"
 });
+formatter.embedding("image/png", "embedded0.png");
 formatter.after({
-  "duration": 15181983910,
+  "duration": 16268733654,
   "status": "passed"
 });
 });

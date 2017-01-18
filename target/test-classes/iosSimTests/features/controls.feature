@@ -3,6 +3,7 @@
 
 Feature: Control
 
+  @ss
   Scenario: Sliding of slider
     Given user is on controls page
     When user slided the customized slider to 100%

@@ -18,7 +18,7 @@ public class Reporting {
 		File reportOutputDirectory = new File("reports/formatted");
 		List<String> jsonFiles = new ArrayList<String>();
 		String buildNumber = "1";
-		String projectName = "All-In-One Toolbox";
+		String projectName = "iOS Simulator Tests";
 		boolean runWithJenkins = false;
 		boolean parallelTesting = false;
 		Configuration configuration = new Configuration(reportOutputDirectory, projectName);
@@ -30,9 +30,9 @@ public class Reporting {
 		configuration.setBuildNumber(buildNumber);
 		
 		// addidtional metadata presented on main page
-		configuration.addClassifications("Platform Name", "Android");
-		configuration.addClassifications("Platform Version", "6.0.1");
-		configuration.addClassifications("Device Name", "Redmi Note 3");
+		configuration.addClassifications("Platform Name", "iOS");
+		configuration.addClassifications("Platform Version", "9.0");
+		configuration.addClassifications("Device Name", "iPhone 6 Simulator");
 		
 		
 		ReportBuilder reportBuilder = new ReportBuilder(jsonFiles, configuration);
@@ -47,7 +47,7 @@ public class Reporting {
         try {
         	if(new File("reports.zip").exists())
         	new File("reports.zip").delete();
-            zip.zip(new File("reports/formatted/cucumber-html-reports"), new File("reports.zip"));
+            zip.zip(new File("reports/html/result.html"), new File("reports.zip"));
         } catch (IOException e) {
             e.printStackTrace();
 }
