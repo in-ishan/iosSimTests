@@ -46,7 +46,6 @@ public class Hooks
          scenario.embed(screenshot, "image/png"); 
 		driver.quit();
 		service.stop();
-		report.zipReports();
 	
 	}
 

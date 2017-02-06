@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="88.378095">
+<testcase classname="Control" name="Sliding of slider" time="88.378095">
+<system-out><![CDATA[Given user is on controls page..............................................passed
+When user slided the customized slider to 100%..............................passed
+Then slider value should changed to 100%....................................passed
+]]></system-out>
+</testcase>
+</testsuite>

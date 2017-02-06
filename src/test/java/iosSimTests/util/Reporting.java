@@ -47,7 +47,7 @@ public class Reporting {
         try {
         	if(new File("reports.zip").exists())
         	new File("reports.zip").delete();
-            zip.zip(new File("reports/html"), new File("reports.zip"));
+            zip.zip(new File("reports/html/result.html"), new File("reports.zip"));
         } catch (IOException e) {
             e.printStackTrace();
 }
